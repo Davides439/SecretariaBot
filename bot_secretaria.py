@@ -32,5 +32,11 @@ app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 
 print("Bot en ejecución...")
+if __name__ == "__main__":
+    creds = obtener_credenciales()
+    service = build("calendar", "v3", credentials=creds)
+    print("✅ Autenticado correctamente con Google Calendar")
+    app.run_polling()
 app.run_polling()
+
 
