@@ -37,6 +37,6 @@ if __name__ == "__main__":
     service = build("calendar", "v3", credentials=creds)
     print("✅ Autenticado correctamente con Google Calendar")
     app.run_polling()
-app.run_polling()
+
 
 
